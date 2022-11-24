@@ -11,9 +11,9 @@ Given value X: 6.
 ​
 The pairs of integers in the list that sum X=12 are:
 
-6 and 0
--2 and 8
--1 and 7
+* 6 and 0
+* -2 and 8
+* -1 and 7
 
 # Python version
 Python 3.11.0
