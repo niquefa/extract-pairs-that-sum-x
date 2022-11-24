@@ -1,11 +1,14 @@
 import logging
 from datetime import datetime
-from analyzer import constants
 from analyzer import exceptions
 
 
 def parse_arguments(args):
-    return list(map(int, args[1].split(","))), int(args[2])
+    try:
+        return list(map(int, args[1].split(","))), int(args[2])
+    except Exception as error:
+        log_error(exceptions.InvalidAppArgumentsError(args), "Please check arguments for the program.")
+        raise exceptions.InvalidAppArgumentsError(args)
 
 
 def validate_app_arguments(args):

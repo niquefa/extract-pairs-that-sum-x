@@ -31,7 +31,7 @@ class InvalidAppArgumentsError(Exception):
     def __init__(
         self,
         args,
-        message="Invalid arguments set, expecting two arguments: a comma separated list with no spaces, of integers and a integer number x",
+        message="Invalid arguments set, expecting two arguments: a comma separated list with no spaces, of not duplicated integers and the second should be an integer number",
     ):
         if args is not None:
             self.args = args
